@@ -5,11 +5,11 @@ const input = document.querySelector('.email');
 const message = document.querySelector('.message');
 
 
-updateInput();
 
-form.addEventListener('input', throttle(500, setDataOnInput));
+
+form.addEventListener('input', throttle(setDataOnInput, 500));
 form.addEventListener('submit', resetOnSubmit);
-
+updateInput();
 function setDataOnInput(event) {
   const {
     elements: { email, message },
